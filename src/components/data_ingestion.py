@@ -5,6 +5,7 @@ from src.exception import CustomException
 from src.logger import logging
 from dataclasses import dataclass
 from sklearn.model_selection import train_test_split
+from src.components.data_transformation import DataTranformationConfig,DataTransformation
 
 
 @dataclass
@@ -23,6 +24,7 @@ class DataIngestion:
         try:
             df = pd.read_csv('notebook\data\Restaurant_revenue.csv')
             logging.info('Read Dataset Into a Dataframe')
+
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
@@ -46,8 +48,13 @@ class DataIngestion:
 
 
 if __name__ == "__main__":
-    obj = DataIngestion()
-    train_data,test_data = obj.initiate_data_ingestion()
+    data_ingestion_obj = DataIngestion()
+    train_data,test_data = data_ingestion_obj.initiate_data_ingestion()
+
+    data_transformation_obj = DataTransformation()
+    train_arr,test_arr,_ = data_transformation_obj.initiate_data_transfromation(train_data,test_data)
+
+
 
     
 
