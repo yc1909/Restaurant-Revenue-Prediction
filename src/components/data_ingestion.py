@@ -6,6 +6,7 @@ from src.logger import logging
 from dataclasses import dataclass
 from sklearn.model_selection import train_test_split
 from src.components.data_transformation import DataTranformationConfig,DataTransformation
+from src.components.model_trainer import Model_Trainer,Model_Trainer_Config
 
 
 @dataclass
@@ -53,6 +54,11 @@ if __name__ == "__main__":
 
     data_transformation_obj = DataTransformation()
     train_arr,test_arr,_ = data_transformation_obj.initiate_data_transfromation(train_data,test_data)
+
+    model_trainer_obj = Model_Trainer()
+    best_score = model_trainer_obj.initiate_model_trainer(train_arr,test_arr)
+    print(f'Best score is: {round((best_score * 100),2)}%')
+
 
 
 
