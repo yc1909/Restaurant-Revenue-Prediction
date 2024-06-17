@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Revenue Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div class="bg">
+        <div class="login">
+            <h1>Restaurant Revenue Prediction</h1>
+            <form action="{{ url_for('predictdata') }}" method="post">
+                <div class="mb-3">
+                    <label class="form-label">Number of Customers</label>
+                    <input class="form-control" type="number" name="Number_of_Customers" placeholder="Enter Number of Customers" value="{{ request.form.Number_of_Customers }}"/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Menu Price</label>
+                    <input class="form-control" type="number" name="Menu_Price" placeholder="Enter Average Menu Price" step="0.01" value="{{ request.form.Menu_Price }}"/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Marketing Spend</label>
+                    <input class="form-control" type="number" name="Marketing_Spend" placeholder="Enter Average Marketing Spend" step="0.01" value="{{ request.form.Marketing_Spend }}"/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Cuisine Type</label>
+                    <select class="form-control" name="Cuisine_Type" required>
+                        <option class="placeholder" selected disabled value="">Select Cuisine Type</option>
+                        <option value="Italian" {% if request.form.Cuisine_Type == 'Italian' %}selected{% endif %}>Italian</option>
+                        <option value="Mexican" {% if request.form.Cuisine_Type == 'Mexican' %}selected{% endif %}>Mexican</option>
+                        <option value="Japanese" {% if request.form.Cuisine_Type == 'Japanese' %}selected{% endif %}>Japanese</option>
+                        <option value="American" {% if request.form.Cuisine_Type == 'American' %}selected{% endif %}>American</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Customer Spending</label>
+                    <input class="form-control" type="number" name="Average_Customer_Spending" placeholder="Enter Average Customer Spending" step="0.01" value="{{ request.form.Average_Customer_Spending }}"/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Promotion</label>
+                    <select class="form-control" name="Promotions" required>
+                        <option class="placeholder" selected disabled value="">Select Below</option>
+                        <option value="0" {% if request.form.Promotions == '0' %}selected{% endif %}>No</option>
+                        <option value="1" {% if request.form.Promotions == '1' %}selected{% endif %}>Yes</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Reviews</label>
+                    <input class="form-control" type="number" name="Reviews" placeholder="Enter Number of Reviews" value="{{ request.form.Reviews }}"/>
+                </div>
+                <div class="mb-3">
+                    <input class="btn btn-primary" type="submit" value="Predict Restaurant Revenue" />
+                </div>
+            </form>
+            <h2>The Predicted Restaurant Revenue(in dollars) is: {{ results }}</h2>
+        </div>
+    </div>
+</body>
+</html>

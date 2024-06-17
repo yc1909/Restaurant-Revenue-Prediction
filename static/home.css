@@ -1,0 +1,103 @@
+body {
+    
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+.bg {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+.bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/restaurant_bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1; 
+}
+
+.login {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(222, 184, 135, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+legend {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.form-control {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+    padding: 10px;
+    font-size: 1em;
+    color:rgba(0, 0, 0, 0.75);
+    font-weight: bold;
+    background-color: rgba(165,42,42,0.55);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: brown;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color:  rgba(0, 0, 0, 0.75);
+}
