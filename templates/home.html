@@ -53,7 +53,9 @@
                     <input class="btn btn-primary" type="submit" value="Predict Restaurant Revenue" />
                 </div>
             </form>
+            {% if results %}
             <h2>The Predicted Restaurant Revenue is: ${{ results }}</h2>
+            {% endif %} 
         </div>
     </div>
 </body>
