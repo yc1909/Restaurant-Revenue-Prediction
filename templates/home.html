@@ -16,11 +16,11 @@
                     <input class="form-control" type="number" name="Number_of_Customers" placeholder="Enter Number of Customers" value="{{ request.form.Number_of_Customers }}"/>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Menu Price</label>
+                    <label class="form-label">Menu Price($)</label>
                     <input class="form-control" type="number" name="Menu_Price" placeholder="Enter Average Menu Price" step="0.01" value="{{ request.form.Menu_Price }}"/>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Marketing Spend</label>
+                    <label class="form-label">Marketing Spend($)</label>
                     <input class="form-control" type="number" name="Marketing_Spend" placeholder="Enter Average Marketing Spend" step="0.01" value="{{ request.form.Marketing_Spend }}"/>
                 </div>
                 <div class="mb-3">
@@ -34,7 +34,7 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Customer Spending</label>
+                    <label class="form-label">Customer Spending($)</label>
                     <input class="form-control" type="number" name="Average_Customer_Spending" placeholder="Enter Average Customer Spending" step="0.01" value="{{ request.form.Average_Customer_Spending }}"/>
                 </div>
                 <div class="mb-3">
@@ -53,7 +53,7 @@
                     <input class="btn btn-primary" type="submit" value="Predict Restaurant Revenue" />
                 </div>
             </form>
-            <h2>The Predicted Restaurant Revenue(in dollars) is: {{ results }}</h2>
+            <h2>The Predicted Restaurant Revenue is: ${{ results }}</h2>
         </div>
     </div>
 </body>
