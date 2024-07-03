@@ -59,10 +59,12 @@ Train the machine learning model using the prepared dataset.
 
 ### Generating Predictions
 Use the trained model to generate revenue predictions.
+
 <img src="images/predictions.png" alt="predictions" width="500" height="500"/>
 
 ### Visualization and Analysis
 Visualize data and predictions to analyze results.
+
 <img src="images/viz-analysis.png" alt="analysis" width="500" height="500"/>
 
 
