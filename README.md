@@ -24,6 +24,9 @@ The project is meant to deliver the following:
 3. **Key Revenue Drivers Identification**: Identifies the most influential factors that drive revenue, providing valuable insights into what contributes most to a restaurant's success.
 4. **User-Friendly Interface**: Features a user-friendly interface for easy interaction with the model, allowing users to input data and receive predictions without needing extensive technical knowledge.
 
+<img src="images/UI-1.png" alt="Index Image" width="500" height="500"/>
+<img src="images/home.png" alt="Home Image" width="500" height="500"/>
+
 ## Getting Started
 <a name="getting-started"></a>
 The project includes a Flask application implemented in `application.py`. It can be run using code editors such as VSCode. The server will be hosted locally, and the web application can be accessed by opening the browser and navigating to http://localhost:5000. To launch the web application, follow these steps:
