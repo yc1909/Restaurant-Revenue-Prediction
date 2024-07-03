@@ -10,11 +10,10 @@ The "Restaurant Revenue Prediction" project aims to build a predictive model to 
 2. [Features](#features)
 3. [Getting Started](#getting-started)
 4. [Usage](#usage)
-5. [Project Structure](#project-structure)
-6. [Contributing](#contributing)
-8. [License](#license)
-9. [Contact](#contact)
-10. [Acknowledgements](#acknowledgements)
+5. [Results](#results)
+6. [Deployment](#deployment)
+7. [Project Structure](#project-structure)
+8. [Contributing](#contributing)
 
 ## Features
 <a name="features"></a>
@@ -23,9 +22,6 @@ The project is meant to deliver the following:
 2. **Comprehensive Data Analysis**: Analyzes a wide range of factors that impact restaurant revenues, including historical sales data, location demographics, customer reviews, and market trends.
 3. **Key Revenue Drivers Identification**: Identifies the most influential factors that drive revenue, providing valuable insights into what contributes most to a restaurant's success.
 4. **User-Friendly Interface**: Features a user-friendly interface for easy interaction with the model, allowing users to input data and receive predictions without needing extensive technical knowledge.
-
-<img src="images/UI-1.png" alt="Index Image" width="500" height="500"/>
-<img src="images/home.png" alt="Home Image" width="500" height="500"/>
 
 ## Getting Started
 <a name="getting-started"></a>
@@ -68,6 +64,40 @@ Use the trained model to generate revenue predictions.
 Visualize data and predictions to analyze results.
 
 <img src="images/viz-analysis.png" alt="analysis" width="500" height="500"/>
+
+## Results
+<a name="results"></a>
+The final outcome of the project includes a web application that allows users to predict restaurant revenue by inputting various factors. The website features a user-friendly interface where users can enter data such as the number of customers, menu prices, marketing spend, cuisine type, customer spending, promotions, and reviews to get an estimated monthly revenue.
+
+<img src="images/UI-1.png" alt="Index" width="500" height="500"/>
+<img src="images/home.png" alt="Home" width="500" height="500"/>
+
+## Deployment
+<a name="deployment"></a>
+
+**Step-by-Step Deployment Process**
+Deploy the trained model using AWS Elastic Beanstalk and CodePipeline.
+
+**Step 1: Create Elastic Beanstalk Environment**
+1. Sign in to AWS and open Elastic Beanstalk.
+2. Create a new application: name it, select Python platform.
+3. Configure environment: choose Web server, set instance type, upload code.
+4. Create environment and wait for setup.
+
+**Step 2: Initialize EC2 Instance**
+1. Monitor environment creation in Elastic Beanstalk.
+2. Ensure EC2 instance is running in the EC2 console.
+   
+**Step 3: Create Continuous Deployment with CodePipeline**
+1. Open CodePipeline in AWS.
+2. Create a new pipeline: name it, select service role.
+3. Add source stage: select GitHub, connect account, choose repository and branch.
+4. Add deploy stage: select Elastic Beanstalk, choose application and environment.
+5. Create the pipeline to start deployment.
+   
+**Step 4: Access the Website**
+1. Obtain domain name from Elastic Beanstalk.
+2. Open the domain in a browser to access the website.
 
 ## Project Structure
 <a name="project-structure"></a>
@@ -121,6 +151,10 @@ Restaurant-Revenue-Prediction/
 │   ├── index.html                                       # Index page HTML template
 ├── venv/                                                # Python virtual environment
 ```
+
+## Contributing
+
+
 
 
 
