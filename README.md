@@ -47,12 +47,26 @@ python application.py
 <a name="usage"></a>
 ### Data Preparation
 
-1. **Data Collection**: The dataset was acquired from: https://www.kaggle.com/datasets/mrsimple07/restaurants-revenue-prediction/data
-2. **Data Cleaning**: Handled missing values, removed duplicates, and corrected inconsistencies.
-3. **Data Preprocessing**: Encoded categorical variables, normalized numerical variables, and created new features.
+Collect and preprocess your data:
+1. **Data Collection**: Gather historical sales, customer reviews, location demographics, and market trends. The dataset in this project is acquired from: https://www.kaggle.com/datasets/mrsimple07/restaurants-revenue-prediction/data
+2. **Data Cleaning**: Handle missing values, remove duplicates, and correct inconsistencies.
+3. **Data Preprocessing**: Encode categorical variables, normalize numerical variables, and create new features.
 
 ### Model Training
-Trained the machine learning model using the prepared dataset.
+Train the machine learning model using the prepared dataset.
+<img src="images/model-func.png" alt="model function" width="500" height="500"/>
+<img src="images/model-trainer.png" alt="model trainer" width="500" height="500"/>
+
+### Generating Predictions
+Use the trained model to generate revenue predictions.
+<img src="images/predictions.png" alt="predictions" width="500" height="500"/>
+
+### Visualization and Analysis
+Visualize data and predictions to analyze results.
+<img src="images/viz-analysis.png" alt="analysis" width="500" height="500"/>
+
+
+
 
 
 
