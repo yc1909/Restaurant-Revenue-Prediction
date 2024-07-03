@@ -10,9 +10,8 @@ The "Restaurant Revenue Prediction" project aims to build a predictive model to 
 2. [Features](#features)
 3. [Getting Started](#getting-started)
 4. [Usage](#usage)
-5. [Examples](#examples)
-6. [Project Structure](#project-structure)
-7. [Contributing](#contributing)
+5. [Project Structure](#project-structure)
+6. [Contributing](#contributing)
 8. [License](#license)
 9. [Contact](#contact)
 10. [Acknowledgements](#acknowledgements)
@@ -66,6 +65,60 @@ Use the trained model to generate revenue predictions.
 Visualize data and predictions to analyze results.
 
 <img src="images/viz-analysis.png" alt="analysis" width="500" height="500"/>
+
+## Project Structure
+<a name="project-structure"></a>
+```bash
+Restaurant-Revenue-Prediction/
+├── README.md                                            # Project documentation and overview
+├── Restaurant_Revenue_Prediction.egg-info/              # Metadata about the project package
+├── application.py                                       # Main application script
+├── artifacts/                                           # Folder containing artifacts from the model training
+│   ├── data.csv                                         # Combined dataset for analysis
+│   ├── model.pkl                                        # Serialized model file
+│   ├── preprocessor.pkl                                 # Serialized data preprocessing object
+│   ├── test.csv                                         # Test dataset
+│   ├── train.csv                                        # Training dataset
+├── catboost_info/                                       # Folder for CatBoost training information
+├── images/                                              # Images used in the project
+│   ├── model-func.png                                   # Image explaining model functions
+│   ├── model-trainer.png                                # Image showing the model training process
+│   ├── predictions.png                                  # Image showing prediction results
+│   ├── restaurant-img.jpg                               # Restaurant-related image
+│   ├── viz-analysis.png                                 # Visualization of analysis results
+├── logs/                                                # Folder containing log files
+├── notebook/                                            # Jupyter notebooks for exploratory data analysis and model training
+│   ├── RestaurantRevenuePrediction-EDA.ipynb            # Notebook for exploratory data analysis
+│   ├── RestaurantRevenuePrediction-ModelTraining.ipynb  # Notebook for model training
+│   ├── data/                                            # Data used in notebooks
+│   │   ├── Restaurant_revenue.csv                       # CSV file containing restaurant revenue data
+├── requirements.txt                                     # List of project dependencies
+├── setup.py                                             # Script for setting up the project package
+├── src/                                                 # Source code for the project
+│   ├── __init__.py                                      # Init file for src module
+│   ├── components/                                      # Components of the data pipeline
+│   │   ├── __init__.py                                  # Init file for components module
+│   │   ├── data_ingestion.py                            # Script for data ingestion
+│   │   ├── data_transformation.py                       # Script for data transformation
+│   │   ├── model_trainer.py                             # Script for training the model
+│   ├── exception.py                                     # Custom exception handling
+│   ├── logger.py                                        # Logging configuration
+│   ├── pipeline/                                        # Pipeline scripts for training and prediction
+│   │   ├── __init__.py                                  # Init file for pipeline module
+│   │   ├── predict_pipeline.py                          # Prediction pipeline script
+│   │   ├── train_pipeline.py                            # Training pipeline script
+│   ├── utils.py                                         # Utility functions
+├── static/                                              # Static files for the web application
+│   ├── home.css                                         # CSS for the home page
+│   ├── index.css                                        # CSS for the index page
+│   ├── images/                                          # Static images for the web application
+│   │   ├── restaurant_bg.png                            # Background image for the restaurant
+├── templates/                                           # HTML templates for the web application
+│   ├── home.html                                        # Home page HTML template
+│   ├── index.html                                       # Index page HTML template
+├── venv/                                                # Python virtual environment
+```
+
 
 
 
