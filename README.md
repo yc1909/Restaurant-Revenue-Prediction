@@ -100,7 +100,7 @@ Deploy the trained model using AWS Elastic Beanstalk and CodePipeline.
    
 **Step 4: Access the Website**
 1. Obtain domain name from Elastic Beanstalk.
-2. Open the domain in a browser to access the website.
+2. Open the domain in a browser to access the website:
 http://restautrantrevenueprediction-env.eba-ugz3pymu.eu-north-1.elasticbeanstalk.com/
 
 ## Project Structure
@@ -157,12 +157,13 @@ Restaurant-Revenue-Prediction/
 ```
 
 ## Contributing
+<a name="contributing"></a>
 
+Contributions are welcome! Here's how you can help:
 
-
-
-
-
-
-
-
+1. Fork the repository on GitHub.
+2. Clone your fork to your local machine.
+3. Create a new branch for your feature or bug fix.
+4. Make your changes and commit them with descriptive messages.
+5. Push to your fork and submit a pull request.
+6. Ensure your changes pass existing tests and add new tests if necessary.
