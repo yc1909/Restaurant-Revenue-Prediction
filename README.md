@@ -52,6 +52,7 @@ Collect and preprocess your data:
 
 ### Model Training
 Train the machine learning model using the prepared dataset.
+
 <img src="images/model-func.png" alt="model function" width="500" height="500"/>
 <img src="images/model-trainer.png" alt="model trainer" width="500" height="500"/>
 
