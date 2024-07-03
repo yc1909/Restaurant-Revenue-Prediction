@@ -83,17 +83,20 @@ Deploy the trained model using AWS Elastic Beanstalk and CodePipeline.
 2. Create a new application: name it, select Python platform.
 3. Configure environment: choose Web server, set instance type, upload code.
 4. Create environment and wait for setup.
+<img src="images/EBS.png" alt="EBS" width="500" height="500"/>
 
 **Step 2: Initialize EC2 Instance**
 1. Monitor environment creation in Elastic Beanstalk.
-2. Ensure EC2 instance is running in the EC2 console.
-   
+2. Ensure EC2 instance is running in the EC2 console. 
+<img src="images/EC2.png" alt="EC2" width="500" height="500"/>
+
 **Step 3: Create Continuous Deployment with CodePipeline**
 1. Open CodePipeline in AWS.
 2. Create a new pipeline: name it, select service role.
 3. Add source stage: select GitHub, connect account, choose repository and branch.
 4. Add deploy stage: select Elastic Beanstalk, choose application and environment.
 5. Create the pipeline to start deployment.
+<img src="images/pipeline.png" alt="pipeline" width="500" height="500"/>
    
 **Step 4: Access the Website**
 1. Obtain domain name from Elastic Beanstalk.
