@@ -101,8 +101,7 @@ Deploy the trained model using AWS Elastic Beanstalk and CodePipeline.
    
 **Step 4: Access the Website**
 1. Obtain domain name from Elastic Beanstalk.
-2. Open the domain in a browser to access the website:
-http://restautrantrevenueprediction-env.eba-ugz3pymu.eu-north-1.elasticbeanstalk.com/
+2. Open the domain in a browser to access the website.
 
 ## Project Structure
 <a name="project-structure"></a>
